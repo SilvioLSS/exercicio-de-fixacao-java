@@ -56,10 +56,5 @@ public class Aluno {
         } else {
             return false;
             }
-    }
-
-    private double calcular(double nota1, double nota2, double nota3){
-        return nota1 * 0.30 + nota2 * 0.35 + nota3 * 0.35;
-    }
-
-}
+    } 
+} 
