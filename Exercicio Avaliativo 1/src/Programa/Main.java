@@ -20,9 +20,13 @@ public class Main {
         System.out.printf("\nDigite a nota 3 do aluno %s (De 0 a 10): ", a1.getNome());
         a1.setNota3(sc.nextDouble());
 
-        double media = a1.getNota1() * 0.30 + a1.getNota2() * 0.35 + a1.getNota3() * 0.35;
+        double media = a1.calcularMedia();
 
         System.out.printf("\nA média do aluno %s é: %.2f\n\n", a1.getNome(), media);
+        if(a1.aprovar())
+        System.out.println("Está aprovado.\n\n");
+        else
+        System.out.println("Está reprovado.\n\n");
         
         sc.close();
     }

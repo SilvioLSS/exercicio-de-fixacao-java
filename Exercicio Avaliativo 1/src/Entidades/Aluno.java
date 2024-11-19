@@ -11,9 +11,9 @@ public class Aluno {
     }
 
     public void setNota1(double nota1) {
-        if(validar(nota1)){
+        if (validar(nota1)) {
             this.nota1 = nota1;
-        }else{
+        } else {
             throw new IllegalArgumentException("Nota inválida!");
         }
     }
@@ -23,9 +23,9 @@ public class Aluno {
     }
 
     public void setNota2(double nota2) {
-        if(validar(nota2)){
+        if (validar(nota2)) {
             this.nota2 = nota2;
-        }else{
+        } else {
             throw new IllegalArgumentException("Nota inválida!");
         }
     }
@@ -35,9 +35,9 @@ public class Aluno {
     }
 
     public void setNota3(double nota3) {
-        if(validar(nota3)){
+        if (validar(nota3)) {
             this.nota3 = nota3;
-        }else{
+        } else {
             throw new IllegalArgumentException("Nota inválida!");
         }
     }
@@ -51,10 +51,22 @@ public class Aluno {
     }
 
     private boolean validar(double valor) {
-        if (valor >= 0 && valor <= 10){
+        if (valor >= 0 && valor <= 10) {
             return true;
         } else {
             return false;
-            }
-    } 
-} 
+        }
+    }
+
+    public double calcularMedia() {
+        return nota1 * 0.30 + nota2 * 0.35 + nota3 * 0.35;
+    }
+
+    public boolean aprovar(){
+        if (calcularMedia() > 5.99)
+            return true;
+        else
+            return false;
+    }
+
+}
